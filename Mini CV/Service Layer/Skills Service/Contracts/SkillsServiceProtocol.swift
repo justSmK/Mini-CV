@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SkillServiceProtocol {
+protocol SkillsServiceProtocol {
     func fetchSkills() -> [Skill]
     func saveSkills(_ skills: [Skill])
 }

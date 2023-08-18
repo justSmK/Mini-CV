@@ -9,11 +9,11 @@ import UIKit
 
 class CVViewController: UIViewController {
     
-    private let skillsService: SkillServiceProtocol
+    private let skillsService: SkillsServiceProtocol
     
     private var skillModels = [Skill]()
     
-    init(skillsService: SkillServiceProtocol) {
+    init(skillsService: SkillsServiceProtocol) {
         self.skillsService = skillsService
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,17 +25,6 @@ class CVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
-        skillModels = skillsService.fetchSkills()
-        print(skillModels)
-        
-        skillModels.append(Skill(name: "Something new"))
-        
-        skillsService.saveSkills(skillModels)
-        
-        let test = skillsService.fetchSkills()
-        print(test)
-        
     }
 
 

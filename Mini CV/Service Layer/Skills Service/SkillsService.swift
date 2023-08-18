@@ -18,7 +18,7 @@ final class SkillsService {
     }
 }
 
-extension SkillsService: SkillServiceProtocol {
+extension SkillsService: SkillsServiceProtocol {
     func fetchSkills() -> [Skill] {
         guard let skills: [Skill] = storageManager.codableData(forKey: .skills) else {
             return defaultsSkills

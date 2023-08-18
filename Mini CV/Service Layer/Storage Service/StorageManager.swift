@@ -43,6 +43,4 @@ extension StorageManager: StorageManagerProtocol {
     func remove(forKey key: Keys) {
         remove(forKey: key.rawValue)
     }
-    
-    
 }

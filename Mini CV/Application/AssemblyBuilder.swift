@@ -15,7 +15,7 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
     func createCVViewController() -> UIViewController {
         let storageManager: StorageManagerProtocol = StorageManager()
         let defaultsSkills = MockData.shared.defaultsSkills
-        let skillService: SkillServiceProtocol = SkillsService(storageManager: storageManager, skills: defaultsSkills)
+        let skillService: SkillsServiceProtocol = SkillsService(storageManager: storageManager, skills: defaultsSkills)
         
         let viewController = CVViewController(skillsService: skillService)
         
