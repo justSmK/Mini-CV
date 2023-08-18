@@ -9,7 +9,7 @@ import Foundation
 
 final class StorageManager {
     enum Keys: String {
-        case skill
+        case skills
     }
     
     private let userDefaults = UserDefaults.standard
@@ -29,7 +29,8 @@ final class StorageManager {
 
 extension StorageManager: StorageManagerProtocol {
     func set<T: Encodable>(_ object: T?, forKey key: Keys) {
-        store(object, key: key.rawValue)
+        let data = try? JSONEncoder().encode(object)
+        store(data, key: key.rawValue)
     }
     
     func codableData<T: Decodable>(forKey key: Keys) -> T? {

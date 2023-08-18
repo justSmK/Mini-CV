@@ -9,27 +9,33 @@
 /* Begin PBXBuildFile section */
 		BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */; };
 		BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */; };
-		BB8CD7852A8FDB0B00676A11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7842A8FDB0B00676A11 /* ViewController.swift */; };
+		BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */; };
 		BB8CD78A2A8FDB0C00676A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */; };
 		BB8CD78D2A8FDB0C00676A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */; };
-		BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */; };
+		BBBAB2D52A8FF0E30077ECAF /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D42A8FF0E30077ECAF /* AssemblyBuilder.swift */; };
 		BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */; };
 		BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */; };
 		BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */; };
+		BBBAB2E72A8FF7B20077ECAF /* SkillsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E62A8FF7B20077ECAF /* SkillsServiceProtocol.swift */; };
+		BBBAB2E92A8FF7EA0077ECAF /* SkillsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E82A8FF7EA0077ECAF /* SkillsService.swift */; };
+		BBBAB2EC2A8FFB9A0077ECAF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2EB2A8FFB9A0077ECAF /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB8CD77D2A8FDB0B00676A11 /* Mini CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini CV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB8CD7842A8FDB0B00676A11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
 		BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8CD78C2A8FDB0C00676A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8CD78E2A8FDB0C00676A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
+		BBBAB2D42A8FF0E30077ECAF /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModel.swift; sourceTree = "<group>"; };
 		BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerProtocol.swift; sourceTree = "<group>"; };
 		BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		BBBAB2E62A8FF7B20077ECAF /* SkillsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsServiceProtocol.swift; sourceTree = "<group>"; };
+		BBBAB2E82A8FF7EA0077ECAF /* SkillsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsService.swift; sourceTree = "<group>"; };
+		BBBAB2EB2A8FFB9A0077ECAF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,7 @@
 			children = (
 				BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */,
 				BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */,
-				BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */,
+				BBBAB2D42A8FF0E30077ECAF /* AssemblyBuilder.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -84,9 +90,10 @@
 			children = (
 				BB516FDE2A8FE25D00047BC5 /* Resources */,
 				BB516FDD2A8FE24C00047BC5 /* Application */,
-				BB8CD7842A8FDB0B00676A11 /* ViewController.swift */,
+				BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */,
 				BBBAB2DA2A8FF3560077ECAF /* Service Layer */,
 				BBBAB2D62A8FF2B80077ECAF /* Entities */,
+				BBBAB2EA2A8FFB890077ECAF /* Mocks */,
 			);
 			path = "Mini CV";
 			sourceTree = "<group>";
@@ -102,7 +109,8 @@
 		BBBAB2DA2A8FF3560077ECAF /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
-				BBBAB2DC2A8FF3A50077ECAF /* Storage Manager */,
+				BBBAB2E42A8FF76F0077ECAF /* Skills Service */,
+				BBBAB2DC2A8FF3A50077ECAF /* Storage Service */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -115,13 +123,38 @@
 			path = Contracts;
 			sourceTree = "<group>";
 		};
-		BBBAB2DC2A8FF3A50077ECAF /* Storage Manager */ = {
+		BBBAB2DC2A8FF3A50077ECAF /* Storage Service */ = {
 			isa = PBXGroup;
 			children = (
 				BBBAB2DB2A8FF3630077ECAF /* Contracts */,
 				BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */,
 			);
-			path = "Storage Manager";
+			path = "Storage Service";
+			sourceTree = "<group>";
+		};
+		BBBAB2E42A8FF76F0077ECAF /* Skills Service */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2E52A8FF7960077ECAF /* Contracts */,
+				BBBAB2E82A8FF7EA0077ECAF /* SkillsService.swift */,
+			);
+			path = "Skills Service";
+			sourceTree = "<group>";
+		};
+		BBBAB2E52A8FF7960077ECAF /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2E62A8FF7B20077ECAF /* SkillsServiceProtocol.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		BBBAB2EA2A8FFB890077ECAF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2EB2A8FFB9A0077ECAF /* MockData.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,13 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8CD7852A8FDB0B00676A11 /* ViewController.swift in Sources */,
+				BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */,
 				BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */,
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
+				BBBAB2E72A8FF7B20077ECAF /* SkillsServiceProtocol.swift in Sources */,
 				BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */,
-				BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */,
+				BBBAB2D52A8FF0E30077ECAF /* AssemblyBuilder.swift in Sources */,
 				BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */,
 				BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */,
+				BBBAB2E92A8FF7EA0077ECAF /* SkillsService.swift in Sources */,
+				BBBAB2EC2A8FFB9A0077ECAF /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
