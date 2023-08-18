@@ -14,6 +14,8 @@
 		BB8CD78D2A8FDB0C00676A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */; };
 		BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */; };
 		BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */; };
+		BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */; };
+		BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BB8CD78E2A8FDB0C00676A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModel.swift; sourceTree = "<group>"; };
+		BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerProtocol.swift; sourceTree = "<group>"; };
+		BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				BB516FDE2A8FE25D00047BC5 /* Resources */,
 				BB516FDD2A8FE24C00047BC5 /* Application */,
 				BB8CD7842A8FDB0B00676A11 /* ViewController.swift */,
+				BBBAB2DA2A8FF3560077ECAF /* Service Layer */,
 				BBBAB2D62A8FF2B80077ECAF /* Entities */,
 			);
 			path = "Mini CV";
@@ -92,6 +97,31 @@
 				BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		BBBAB2DA2A8FF3560077ECAF /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2DC2A8FF3A50077ECAF /* Storage Manager */,
+			);
+			path = "Service Layer";
+			sourceTree = "<group>";
+		};
+		BBBAB2DB2A8FF3630077ECAF /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		BBBAB2DC2A8FF3A50077ECAF /* Storage Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BBBAB2DB2A8FF3630077ECAF /* Contracts */,
+				BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */,
+			);
+			path = "Storage Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +199,8 @@
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
 				BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */,
 				BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */,
+				BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */,
+				BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
