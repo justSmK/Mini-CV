@@ -12,6 +12,7 @@
 		BB8CD7852A8FDB0B00676A11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7842A8FDB0B00676A11 /* ViewController.swift */; };
 		BB8CD78A2A8FDB0C00676A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */; };
 		BB8CD78D2A8FDB0C00676A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */; };
+		BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8CD78C2A8FDB0C00676A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8CD78E2A8FDB0C00676A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			children = (
 				BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */,
 				BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */,
+				BBBAB2D42A8FF0E30077ECAF /* AssemblyModuleBuilder.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				BB8CD7852A8FDB0B00676A11 /* ViewController.swift in Sources */,
 				BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */,
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
+				BBBAB2D52A8FF0E30077ECAF /* AssemblyModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
