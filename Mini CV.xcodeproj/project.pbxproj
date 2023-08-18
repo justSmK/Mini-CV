@@ -35,6 +35,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB516FDD2A8FE24C00047BC5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */,
+				BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BB516FDE2A8FE25D00047BC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */,
+				BB8CD78E2A8FDB0C00676A11 /* Info.plist */,
+				BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BB8CD7742A8FDB0B00676A11 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +73,9 @@
 		BB8CD77F2A8FDB0B00676A11 /* Mini CV */ = {
 			isa = PBXGroup;
 			children = (
-				BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */,
-				BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */,
+				BB516FDE2A8FE25D00047BC5 /* Resources */,
+				BB516FDD2A8FE24C00047BC5 /* Application */,
 				BB8CD7842A8FDB0B00676A11 /* ViewController.swift */,
-				BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */,
-				BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */,
-				BB8CD78E2A8FDB0C00676A11 /* Info.plist */,
 			);
 			path = "Mini CV";
 			sourceTree = "<group>";
@@ -277,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SF69972TN6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini CV/Info.plist";
+				INFOPLIST_FILE = "Mini CV/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +320,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SF69972TN6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini CV/Info.plist";
+				INFOPLIST_FILE = "Mini CV/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
