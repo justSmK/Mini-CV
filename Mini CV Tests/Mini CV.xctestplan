@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "CF6791E9-D91E-48BB-B898-F1153440AC00",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Mini CV.xcodeproj",
+      "identifier" : "BB8CD77C2A8FDB0B00676A11",
+      "name" : "Mini CV"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Mini CV.xcodeproj",
+        "identifier" : "BBBAB2F22A90009E0077ECAF",
+        "name" : "Mini CV Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
