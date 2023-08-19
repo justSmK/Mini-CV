@@ -14,7 +14,7 @@ final class TopViewContainer: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = ConstantsSizes.avatarImage / 2
+        imageView.layer.cornerRadius = ConstantsSizes.avatarImage.width / 2
         return imageView
     }()
     
@@ -43,18 +43,28 @@ final class TopViewContainer: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 1
-        label.adjustsFontSizeToFitWidth = true
+//        label.adjustsFontSizeToFitWidth = true
         label.font = AppFonts.location
         
         #warning("Move this code")
 //        let attachment = NSTextAttachment()
 //        attachment.image = UIImage(named: AppIcons.location)
-        let attributedText = NSMutableAttributedString(string: MockData.shared.location)
+//        let attributedText = NSMutableAttributedString(string: MockData.shared.location)
 //        attributedText.insert(NSAttributedString(attachment: attachment), at: 0)
         
 //        label.attributedText = attributedText
         
-        label.attributedText = .init(AttributedString(MockData.shared.location))
+        let attachment = NSTextAttachment(image: AppIcons.location!)
+        
+        let mid = label.font.capHeight - (attachment.image?.size.height ?? 0) / 2
+        attachment.bounds = CGRect(x: 0, y: -mid, width: attachment.image!.size.width, height: attachment.image!.size.height)
+        
+        let attributedString = NSAttributedString(attachment: attachment)
+        
+        let mutableAttributedString = NSMutableAttributedString(string: MockData.shared.location)
+        mutableAttributedString.insert(attributedString, at: 0)
+        
+        label.attributedText = mutableAttributedString
         
         return label
     }()
@@ -103,8 +113,8 @@ private extension TopViewContainer {
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
             avatarImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            avatarImageView.heightAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage),
-            avatarImageView.widthAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage),
+            avatarImageView.heightAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.height),
+            avatarImageView.widthAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.width),
             
             fullNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
             fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 113),
@@ -115,8 +125,7 @@ private extension TopViewContainer {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -51),
             
             locationLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
-            locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 150),
-            locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -150),
+            locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             locationLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
