@@ -5,8 +5,6 @@
 //  Created by Sergei Semko on 8/18/23.
 //
 
-import Foundation
-
 final class SkillsService {
     
     private let storageManager: StorageManagerProtocol

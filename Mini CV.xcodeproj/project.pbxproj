@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB6C2D5B2A91305700FA1CAF /* CVVC+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C2D5A2A91305700FA1CAF /* CVVC+UIScrollViewDelegate.swift */; };
+		BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */; };
+		BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */; };
+		BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */; };
+		BB7C47A32A90D6CE009386C3 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47A22A90D6CE009386C3 /* CVView.swift */; };
+		BB7C47AB2A91128C009386C3 /* TopViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47AA2A91128C009386C3 /* TopViewContainer.swift */; };
+		BB7C47AD2A911522009386C3 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7C47AC2A911522009386C3 /* Icons.xcassets */; };
+		BB7C47B02A9115CD009386C3 /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47AF2A9115CD009386C3 /* AppIcons.swift */; };
+		BB7C47B22A911672009386C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7C47B12A911672009386C3 /* Colors.xcassets */; };
+		BB7C47B42A9116C8009386C3 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B32A9116C8009386C3 /* AppColors.swift */; };
+		BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B52A911881009386C3 /* ConstantsSizes.swift */; };
+		BB7C47B82A911A12009386C3 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B72A911A12009386C3 /* AppImages.swift */; };
+		BB7C47BF2A911C42009386C3 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47BE2A911C42009386C3 /* AppFonts.swift */; };
+		BB7C47C22A9121DE009386C3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47C12A9121DE009386C3 /* UIView+Extensions.swift */; };
 		BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */; };
 		BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */; };
 		BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */; };
@@ -37,6 +51,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB6C2D5A2A91305700FA1CAF /* CVVC+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVVC+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewProtocol.swift; sourceTree = "<group>"; };
+		BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB7C47A22A90D6CE009386C3 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
+		BB7C47AA2A91128C009386C3 /* TopViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewContainer.swift; sourceTree = "<group>"; };
+		BB7C47AC2A911522009386C3 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		BB7C47AF2A9115CD009386C3 /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
+		BB7C47B12A911672009386C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BB7C47B32A9116C8009386C3 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		BB7C47B52A911881009386C3 /* ConstantsSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSizes.swift; sourceTree = "<group>"; };
+		BB7C47B72A911A12009386C3 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		BB7C47BE2A911C42009386C3 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		BB7C47C12A9121DE009386C3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BB8CD77D2A8FDB0B00676A11 /* Mini CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini CV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8CD7802A8FDB0B00676A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8CD7822A8FDB0B00676A11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,11 +119,112 @@
 		BB516FDE2A8FE25D00047BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BB7C47BC2A911C0C009386C3 /* Constants */,
+				BB7C47BD2A911C38009386C3 /* Fonts */,
+				BB7C47BB2A911BBC009386C3 /* Images */,
+				BB7C47BA2A911B70009386C3 /* Colors */,
 				BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */,
 				BB8CD78E2A8FDB0C00676A11 /* Info.plist */,
 				BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB6C2D5C2A91308800FA1CAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB6C2D5A2A91305700FA1CAF /* CVVC+UIScrollViewDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB7C47972A90D615009386C3 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47982A90D623009386C3 /* CV Flow */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		BB7C47982A90D623009386C3 /* CV Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47992A90D62F009386C3 /* Contracts */,
+				BB7C479A2A90D63C009386C3 /* Views */,
+				BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */,
+				BB6C2D5C2A91308800FA1CAF /* Extensions */,
+			);
+			path = "CV Flow";
+			sourceTree = "<group>";
+		};
+		BB7C47992A90D62F009386C3 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		BB7C479A2A90D63C009386C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C479B2A90D649009386C3 /* Cells */,
+				BB7C47A22A90D6CE009386C3 /* CVView.swift */,
+				BB7C47AA2A91128C009386C3 /* TopViewContainer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB7C479B2A90D649009386C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */,
+				BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BB7C47BA2A911B70009386C3 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47B32A9116C8009386C3 /* AppColors.swift */,
+				BB7C47B12A911672009386C3 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		BB7C47BB2A911BBC009386C3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47AF2A9115CD009386C3 /* AppIcons.swift */,
+				BB7C47B72A911A12009386C3 /* AppImages.swift */,
+				BB7C47AC2A911522009386C3 /* Icons.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		BB7C47BC2A911C0C009386C3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47B52A911881009386C3 /* ConstantsSizes.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BB7C47BD2A911C38009386C3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47BE2A911C42009386C3 /* AppFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BB7C47C02A9121AA009386C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C47C12A9121DE009386C3 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BB8CD7742A8FDB0B00676A11 = {
@@ -119,9 +248,10 @@
 		BB8CD77F2A8FDB0B00676A11 /* Mini CV */ = {
 			isa = PBXGroup;
 			children = (
+				BB7C47C02A9121AA009386C3 /* Extensions */,
 				BB516FDE2A8FE25D00047BC5 /* Resources */,
 				BB516FDD2A8FE24C00047BC5 /* Application */,
-				BB8CD7842A8FDB0B00676A11 /* CVViewController.swift */,
+				BB7C47972A90D615009386C3 /* Presentation Layer */,
 				BBBAB2DA2A8FF3560077ECAF /* Service Layer */,
 				BBBAB2D62A8FF2B80077ECAF /* Entities */,
 				BBBAB2EA2A8FFB890077ECAF /* Mocks */,
@@ -299,6 +429,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8CD78D2A8FDB0C00676A11 /* LaunchScreen.storyboard in Resources */,
+				BB7C47B22A911672009386C3 /* Colors.xcassets in Resources */,
+				BB7C47AD2A911522009386C3 /* Icons.xcassets in Resources */,
 				BB8CD78A2A8FDB0C00676A11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,16 +449,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7C47C22A9121DE009386C3 /* UIView+Extensions.swift in Sources */,
+				BB7C47B42A9116C8009386C3 /* AppColors.swift in Sources */,
+				BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */,
+				BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */,
+				BB7C47AB2A91128C009386C3 /* TopViewContainer.swift in Sources */,
 				BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */,
+				BB7C47B82A911A12009386C3 /* AppImages.swift in Sources */,
 				BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */,
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
 				BBBAB2E72A8FF7B20077ECAF /* SkillsServiceProtocol.swift in Sources */,
 				BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */,
+				BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */,
+				BB7C47B02A9115CD009386C3 /* AppIcons.swift in Sources */,
+				BB7C47A32A90D6CE009386C3 /* CVView.swift in Sources */,
 				BBBAB2D52A8FF0E30077ECAF /* AssemblyBuilder.swift in Sources */,
 				BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */,
+				BB6C2D5B2A91305700FA1CAF /* CVVC+UIScrollViewDelegate.swift in Sources */,
 				BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */,
+				BB7C47BF2A911C42009386C3 /* AppFonts.swift in Sources */,
 				BBBAB2E92A8FF7EA0077ECAF /* SkillsService.swift in Sources */,
 				BBBAB2EC2A8FFB9A0077ECAF /* MockData.swift in Sources */,
+				BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

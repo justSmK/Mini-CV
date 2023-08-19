@@ -5,8 +5,6 @@
 //  Created by Sergei Semko on 8/18/23.
 //
 
-import Foundation
-
 // CRUD: Create, Read, Update, Delete
 
 protocol StorageManagerProtocol {

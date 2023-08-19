@@ -5,7 +5,7 @@
 //  Created by Sergei Semko on 8/18/23.
 //
 
-import Foundation
+import Foundation.NSUserDefaults
 
 final class StorageManager {
     enum Keys: String {

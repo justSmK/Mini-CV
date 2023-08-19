@@ -11,6 +11,8 @@ class CVViewController: UIViewController {
     
     private let skillsService: SkillsServiceProtocol
     
+    private let cvView = CVView()
+    
     private var skillModels = [Skill]()
     
     init(skillsService: SkillsServiceProtocol) {
@@ -22,11 +24,21 @@ class CVViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = cvView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = AppColors.background
+        cvView.setupDelegate(delegate: self)
     }
+}
 
-
+private extension CVViewController {
+    private func setupConstraints() {
+        
+    }
 }
 
