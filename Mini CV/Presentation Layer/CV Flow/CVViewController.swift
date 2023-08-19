@@ -32,7 +32,6 @@ class CVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = AppColors.background
-        cvView.setupDelegate(delegate: self)
     }
 }
 

@@ -33,7 +33,6 @@ final class TopViewContainer: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 2
-        label.adjustsFontSizeToFitWidth = true
         label.font = AppFonts.description
         return label
     }()
@@ -45,27 +44,6 @@ final class TopViewContainer: UIView {
         label.numberOfLines = 1
 //        label.adjustsFontSizeToFitWidth = true
         label.font = AppFonts.location
-        
-        #warning("Move this code")
-//        let attachment = NSTextAttachment()
-//        attachment.image = UIImage(named: AppIcons.location)
-//        let attributedText = NSMutableAttributedString(string: MockData.shared.location)
-//        attributedText.insert(NSAttributedString(attachment: attachment), at: 0)
-        
-//        label.attributedText = attributedText
-        
-        let attachment = NSTextAttachment(image: AppIcons.location!)
-        
-        let mid = label.font.capHeight - (attachment.image?.size.height ?? 0) / 2
-        attachment.bounds = CGRect(x: 0, y: -mid, width: attachment.image!.size.width, height: attachment.image!.size.height)
-        
-        let attributedString = NSAttributedString(attachment: attachment)
-        
-        let mutableAttributedString = NSMutableAttributedString(string: MockData.shared.location)
-        mutableAttributedString.insert(attributedString, at: 0)
-        
-        label.attributedText = mutableAttributedString
-        
         return label
     }()
     
@@ -92,7 +70,10 @@ private extension TopViewContainer {
         avatarImageView.image = AppImages.profile
         fullNameLabel.text = MockData.shared.fullName
         descriptionLabel.text = MockData.shared.description
-//        locationLabel.text = MockData.shared.location
+        
+        guard let locationIconImage else { return }
+        let attachment = NSTextAttachment(image: locationIconImage)
+        locationLabel.attributedText = setupAttributedString(label: locationLabel, attachment: attachment)
     }
     
     func setupLayout() {
@@ -111,7 +92,7 @@ private extension TopViewContainer {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
+            avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
             avatarImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             avatarImageView.heightAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.height),
             avatarImageView.widthAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.width),
@@ -125,8 +106,27 @@ private extension TopViewContainer {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -51),
             
             locationLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
-            locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            locationLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+//            locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            locationLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
+    }
+}
+
+private extension TopViewContainer {
+    func setupAttributedString(label: UILabel, attachment: NSTextAttachment) -> NSMutableAttributedString {
+        let mid = label.font.capHeight - (attachment.image?.size.height ?? 0) / 2.5
+        
+        guard let image = attachment.image else { return  NSMutableAttributedString() }
+        
+        attachment.bounds = CGRect(x: 0, y: -mid, width: image.size.width, height: image.size.height)
+        
+        let attributedString = NSAttributedString(attachment: attachment)
+        
+        let mutableAttributedString = NSMutableAttributedString(string: MockData.shared.location)
+        mutableAttributedString.insert(attributedString, at: 0)
+        
+        return mutableAttributedString
     }
 }

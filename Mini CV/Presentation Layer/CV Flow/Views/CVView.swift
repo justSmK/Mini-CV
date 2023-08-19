@@ -12,15 +12,9 @@ final class CVView: UIView {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.contentInsetAdjustmentBehavior = .always
+        scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.bounces = false
         return scrollView
-    }()
-    
-    private let fillerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = AppColors.gray
-        return view
     }()
     
     private let scrollContainerView: UIView = {
@@ -42,16 +36,11 @@ final class CVView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setupDelegate(delegate: UIScrollViewDelegate) {
-        scrollView.delegate = delegate
-    }
 }
 
 private extension CVView {
     func setupLayout() {
         self.addSubviews(
-            fillerView,
             scrollView
         )
         scrollView.addSubview(scrollContainerView)
@@ -66,11 +55,6 @@ private extension CVView {
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
-            fillerView.topAnchor.constraint(equalTo: self.topAnchor),
-            fillerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            fillerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            fillerView.bottomAnchor.constraint(greaterThanOrEqualTo: scrollContainerView.topAnchor),
             
             scrollContainerView.topAnchor.constraint(equalTo: scrollContentLayoutGuide.topAnchor),
             scrollContainerView.leadingAnchor.constraint(equalTo: scrollContentLayoutGuide.leadingAnchor),
