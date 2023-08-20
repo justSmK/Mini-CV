@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0CB89E2A924E7D00474D0A /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */; };
+		BB0CB8A02A92535D00474D0A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89F2A92535D00474D0A /* Profile.swift */; };
 		BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */; };
 		BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */; };
 		BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */; };
@@ -26,7 +28,7 @@
 		BB8CD78A2A8FDB0C00676A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD7892A8FDB0C00676A11 /* Assets.xcassets */; };
 		BB8CD78D2A8FDB0C00676A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8CD78B2A8FDB0C00676A11 /* LaunchScreen.storyboard */; };
 		BBBAB2D52A8FF0E30077ECAF /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D42A8FF0E30077ECAF /* AssemblyBuilder.swift */; };
-		BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */; };
+		BBBAB2D82A8FF3030077ECAF /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2D72A8FF3030077ECAF /* Skill.swift */; };
 		BBBAB2DE2A8FF3D00077ECAF /* StorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */; };
 		BBBAB2E22A8FF5670077ECAF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */; };
 		BBBAB2E72A8FF7B20077ECAF /* SkillsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBAB2E62A8FF7B20077ECAF /* SkillsServiceProtocol.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		BB0CB89F2A92535D00474D0A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewProtocol.swift; sourceTree = "<group>"; };
 		BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -71,7 +75,7 @@
 		BB8CD78C2A8FDB0C00676A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8CD78E2A8FDB0C00676A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBBAB2D42A8FF0E30077ECAF /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
-		BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModel.swift; sourceTree = "<group>"; };
+		BBBAB2D72A8FF3030077ECAF /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		BBBAB2DD2A8FF3D00077ECAF /* StorageManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerProtocol.swift; sourceTree = "<group>"; };
 		BBBAB2E12A8FF5670077ECAF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		BBBAB2E62A8FF7B20077ECAF /* SkillsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsServiceProtocol.swift; sourceTree = "<group>"; };
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0CB89C2A924E5C00474D0A /* Locilization static data */ = {
+			isa = PBXGroup;
+			children = (
+				BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */,
+			);
+			path = "Locilization static data";
+			sourceTree = "<group>";
+		};
 		BB516FDD2A8FE24C00047BC5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +129,7 @@
 		BB516FDE2A8FE25D00047BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BB0CB89C2A924E5C00474D0A /* Locilization static data */,
 				BB7C47BC2A911C0C009386C3 /* Constants */,
 				BB7C47BD2A911C38009386C3 /* Fonts */,
 				BB7C47BB2A911BBC009386C3 /* Images */,
@@ -251,7 +264,8 @@
 		BBBAB2D62A8FF2B80077ECAF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BBBAB2D72A8FF3030077ECAF /* SkillModel.swift */,
+				BBBAB2D72A8FF3030077ECAF /* Skill.swift */,
+				BB0CB89F2A92535D00474D0A /* Profile.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -440,6 +454,8 @@
 			files = (
 				BB7C47C22A9121DE009386C3 /* UIView+Extensions.swift in Sources */,
 				BB7C47B42A9116C8009386C3 /* AppColors.swift in Sources */,
+				BB0CB89E2A924E7D00474D0A /* LocalizationKeys.swift in Sources */,
+				BB0CB8A02A92535D00474D0A /* Profile.swift in Sources */,
 				BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */,
 				BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */,
 				BB7C47AB2A91128C009386C3 /* TopViewContainer.swift in Sources */,
@@ -448,7 +464,7 @@
 				BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */,
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
 				BBBAB2E72A8FF7B20077ECAF /* SkillsServiceProtocol.swift in Sources */,
-				BBBAB2D82A8FF3030077ECAF /* SkillModel.swift in Sources */,
+				BBBAB2D82A8FF3030077ECAF /* Skill.swift in Sources */,
 				BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */,
 				BB7C47B02A9115CD009386C3 /* AppIcons.swift in Sources */,
 				BB7C47A32A90D6CE009386C3 /* CVView.swift in Sources */,
