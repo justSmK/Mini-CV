@@ -22,7 +22,16 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
         let defaultsSkills = mockData.defaultsSkills
         let skillService: SkillsServiceProtocol = SkillsService(storageManager: storageManager, skills: defaultsSkills)
         
-        let viewController = CVViewController(skillsService: skillService)
+        let profile = Profile(
+            imageName: mockData.profileImageName,
+            fullName: mockData.fullName,
+            description: mockData.description,
+            location: mockData.location,
+            about: mockData.aboutMe
+        )
+        
+        let viewController = CVViewController(skillsService: skillService, profile: profile)
+        
         
         let navigationController = UINavigationController(rootViewController: viewController)
         setupNavigationController(navigationController: navigationController, title: mockData.viewControllerTitle)

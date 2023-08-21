@@ -54,7 +54,6 @@ final class TopViewContainer: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupData()
         setupLayout()
         setupConstraints()
     }
@@ -62,20 +61,20 @@ final class TopViewContainer: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-
-private extension TopViewContainer {
-    private func setupData() {
-        avatarImageView.image = AppImages.profile
-        fullNameLabel.text = MockData.shared.fullName
-        descriptionLabel.text = MockData.shared.description
+    
+    func configureData(profile: Profile) {
+        avatarImageView.image = UIImage(named: profile.imageName)
+        fullNameLabel.text = profile.fullName
+        descriptionLabel.text = profile.description
         
         guard let locationIconImage else { return }
         let attachment = NSTextAttachment(image: locationIconImage)
         locationLabel.attributedText = setupAttributedString(label: locationLabel, attachment: attachment)
     }
-    
+}
+
+
+private extension TopViewContainer {
     func setupLayout() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .systemGray6

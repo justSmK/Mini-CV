@@ -36,6 +36,10 @@ final class CVView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configureData(profile: Profile) {
+        topViewContainer.configureData(profile: profile)
+    }
 }
 
 private extension CVView {

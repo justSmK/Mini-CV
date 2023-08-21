@@ -11,12 +11,15 @@ class CVViewController: UIViewController {
     
     private let skillsService: SkillsServiceProtocol
     
-    private let cvView = CVView()
+    private let profile: Profile
     
     private var skillModels = [Skill]()
     
-    init(skillsService: SkillsServiceProtocol) {
+    private let cvView = CVView()
+    
+    init(skillsService: SkillsServiceProtocol, profile: Profile) {
         self.skillsService = skillsService
+        self.profile = profile
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,6 +35,7 @@ class CVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = AppColors.background
+        cvView.configureData(profile: self.profile)
     }
 }
 

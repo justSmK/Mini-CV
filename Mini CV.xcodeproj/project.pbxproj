@@ -250,13 +250,13 @@
 		BB8CD77F2A8FDB0B00676A11 /* Mini CV */ = {
 			isa = PBXGroup;
 			children = (
-				BB7C47C02A9121AA009386C3 /* Extensions */,
 				BB516FDE2A8FE25D00047BC5 /* Resources */,
 				BB516FDD2A8FE24C00047BC5 /* Application */,
 				BB7C47972A90D615009386C3 /* Presentation Layer */,
 				BBBAB2DA2A8FF3560077ECAF /* Service Layer */,
 				BBBAB2D62A8FF2B80077ECAF /* Entities */,
 				BBBAB2EA2A8FFB890077ECAF /* Mocks */,
+				BB7C47C02A9121AA009386C3 /* Extensions */,
 			);
 			path = "Mini CV";
 			sourceTree = "<group>";

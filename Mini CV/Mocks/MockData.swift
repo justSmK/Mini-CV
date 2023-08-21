@@ -27,6 +27,8 @@ struct MockData {
     
     let viewControllerTitle: String = "Profile"
     
+    let profileImageName: String = "profileImage"
+    
     let fullName: String = "Semko Sergei Sergeevich"
     
     let description: String = "Middle iOS developer, experience 2 years"
