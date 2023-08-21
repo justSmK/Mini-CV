@@ -24,7 +24,7 @@ extension SkillsService: SkillsServiceProtocol {
         return skills.isEmpty ? defaultsSkills : skills
     }
     
-    func saveSkills(_ skills: [Skill], completion: @escaping () -> Void) {
+    func saveSkills(_ skills: [Skill], completion: @escaping () -> Void = {}) {
         storageManager.set(skills, forKey: .skills, completion: completion)
     }
 }

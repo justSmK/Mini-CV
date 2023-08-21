@@ -33,7 +33,7 @@ final class SkillsServiceTest: XCTestCase {
         var newSkills = defaultSkills
         newSkills.append(Skill(name: "FooBazBar"))
         
-        skillsService.saveSkills(newSkills)
+        skillsService.saveSkills(newSkills, completion: {})
         
         let getSkills = skillsService.fetchSkills()
         
@@ -45,9 +45,9 @@ final class SkillsServiceTest: XCTestCase {
     func testEmptyFetchSkills() {
         var newSkills = defaultSkills
         newSkills.append(Skill(name: "FooBazBar"))
-        skillsService.saveSkills(newSkills)
+        skillsService.saveSkills(newSkills, completion: {})
         
-        skillsService.saveSkills([])
+        skillsService.saveSkills([], completion: {})
         
         let getSkills = skillsService.fetchSkills()
         

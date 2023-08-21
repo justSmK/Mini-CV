@@ -9,10 +9,9 @@ import Foundation
 @testable import Mini_CV
 
 class StubStorageManager: StorageManagerProtocol {
-    
     private var storage = [Mini_CV.StorageManager.Keys: Data]()
     
-    func set<T>(_ object: T?, forKey key: Mini_CV.StorageManager.Keys) where T : Encodable {
+    func set<T>(_ object: T?, forKey key: Mini_CV.StorageManager.Keys, completion: @escaping () -> Void = {}) where T : Encodable {
         guard let object else {
             storage[key] = nil
             return

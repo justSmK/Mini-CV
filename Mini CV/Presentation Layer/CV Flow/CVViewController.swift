@@ -36,6 +36,22 @@ class CVViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = AppColors.background
         cvView.configureData(profile: self.profile)
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        sleep(1)
+        
+        skillModels = skillsService.fetchSkills()
+        skillModels.append(Skill(name: "Test"))
+        skillsService.saveSkills(skillModels) { [weak self] in
+            guard let strongSelf = self else { return }
+            let toast = ToastView(message: "Данные сохранены")
+            toast.showToast(on: strongSelf.view)
+        }
     }
 }
 

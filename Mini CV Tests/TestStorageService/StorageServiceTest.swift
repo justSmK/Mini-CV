@@ -28,20 +28,20 @@ final class StorageServiceTest: XCTestCase {
     
     func testSetObject() {
         let setData = mockData
-        storageManager.set(setData, forKey: .skills)
+        storageManager.set(setData, forKey: .skills, completion: {})
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         XCTAssertEqual(getData, setData)
     }
     
     func testGetObject() {
-        storageManager.set(mockData, forKey: .skills)
+        storageManager.set(mockData, forKey: .skills, completion: {})
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         XCTAssertNotNil(getData)
         XCTAssertEqual(getData, mockData)
     }
 
     func testRemoveObject() throws {
-        storageManager.set(mockData, forKey: .skills)
+        storageManager.set(mockData, forKey: .skills, completion: {})
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         storageManager.remove(forKey: .skills)
         let nilData: MockStructDataArray = storageManager.codableData(forKey: .skills)
