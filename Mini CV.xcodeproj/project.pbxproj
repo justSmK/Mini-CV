@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BB0CB89E2A924E7D00474D0A /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */; };
 		BB0CB8A02A92535D00474D0A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89F2A92535D00474D0A /* Profile.swift */; };
+		BB614DE32A9394DD00B33DA5 /* SkillsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */; };
+		BB614DE62A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */; };
 		BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */; };
 		BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
 		BB0CB89F2A92535D00474D0A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionView.swift; sourceTree = "<group>"; };
+		BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewProtocol.swift; sourceTree = "<group>"; };
 		BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BB614DE42A93950C00B33DA5 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C479B2A90D649009386C3 /* Cells */,
+				BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */,
+				BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		BB7C47972A90D615009386C3 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +184,7 @@
 		BB7C479A2A90D63C009386C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BB7C479B2A90D649009386C3 /* Cells */,
+				BB614DE42A93950C00B33DA5 /* CollectionView */,
 				BB7C47A22A90D6CE009386C3 /* CVView.swift */,
 				BB7C47AA2A91128C009386C3 /* TopViewContainer.swift */,
 			);
@@ -460,6 +474,7 @@
 				BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */,
 				BB7C47AB2A91128C009386C3 /* TopViewContainer.swift in Sources */,
 				BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */,
+				BB614DE62A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				BB7C47B82A911A12009386C3 /* AppImages.swift in Sources */,
 				BB8CD7812A8FDB0B00676A11 /* AppDelegate.swift in Sources */,
 				BB8CD7832A8FDB0B00676A11 /* SceneDelegate.swift in Sources */,
@@ -474,6 +489,7 @@
 				BB7C47BF2A911C42009386C3 /* AppFonts.swift in Sources */,
 				BBBAB2E92A8FF7EA0077ECAF /* SkillsService.swift in Sources */,
 				BBBAB2EC2A8FFB9A0077ECAF /* MockData.swift in Sources */,
+				BB614DE32A9394DD00B33DA5 /* SkillsCollectionView.swift in Sources */,
 				BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

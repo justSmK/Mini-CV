@@ -10,7 +10,7 @@
 protocol StorageManagerProtocol {
     // MARK: Create, Update
 //    func set(_ object: Any?, forKey key: StorageManager.Keys)
-    func set<T: Encodable>(_ object: T?, forKey key: StorageManager.Keys)
+    func set<T: Encodable>(_ object: T?, forKey key: StorageManager.Keys, completion: @escaping () -> Void)
     
     // MARK: Read
     func codableData<T: Decodable>(forKey key: StorageManager.Keys) -> T?

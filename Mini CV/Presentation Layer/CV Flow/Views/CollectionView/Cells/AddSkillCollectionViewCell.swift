@@ -9,4 +9,6 @@ import UIKit
 
 class AddSkillCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = String(describing: AddSkillCollectionViewCell.self)
+    
 }

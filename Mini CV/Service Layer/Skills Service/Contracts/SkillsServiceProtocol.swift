@@ -7,5 +7,5 @@
 
 protocol SkillsServiceProtocol {
     func fetchSkills() -> [Skill]
-    func saveSkills(_ skills: [Skill])
+    func saveSkills(_ skills: [Skill], completion: @escaping () -> Void)
 }

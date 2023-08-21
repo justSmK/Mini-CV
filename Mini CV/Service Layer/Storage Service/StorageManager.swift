@@ -28,9 +28,14 @@ final class StorageManager {
 }
 
 extension StorageManager: StorageManagerProtocol {
-    func set<T: Encodable>(_ object: T?, forKey key: Keys) {
-        let data = try? JSONEncoder().encode(object)
-        store(data, key: key.rawValue)
+    func set<T: Encodable>(_ object: T?, forKey key: Keys, completion: @escaping () -> Void) {
+        DispatchQueue.global(qos: .utility).async {
+            let data = try? JSONEncoder().encode(object)
+            self.store(data, key: key.rawValue)
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
     }
     
     func codableData<T: Decodable>(forKey key: Keys) -> T? {
