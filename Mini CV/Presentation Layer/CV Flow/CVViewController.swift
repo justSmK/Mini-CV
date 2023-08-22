@@ -35,29 +35,47 @@ class CVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = AppColors.background
-        cvView.configureData(profile: self.profile)
-        
-        
+        loadData()
+        cvView.configureData(profile: self.profile, delegate: self, dataSource: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        sleep(1)
-        
+//        sleep(1)
+//        
+//        skillModels = skillsService.fetchSkills()
+//        skillModels.append(Skill(name: "Test"))
+//        skillsService.saveSkills(skillModels) { [weak self] in
+//            guard let strongSelf = self else { return }
+//            let toast = ToastView(message: "Данные сохранены")
+//            toast.showToast(on: strongSelf.view)
+//        }
+    }
+    
+    private func loadData() {
         skillModels = skillsService.fetchSkills()
-        skillModels.append(Skill(name: "Test"))
-        skillsService.saveSkills(skillModels) { [weak self] in
-            guard let strongSelf = self else { return }
-            let toast = ToastView(message: "Данные сохранены")
-            toast.showToast(on: strongSelf.view)
+    }
+}
+
+
+extension CVViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return skillModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SkillCollectionViewCell.identifier, for: indexPath) as? SkillCollectionViewCell else {
+            return UICollectionViewCell()
         }
-    }
-}
-
-private extension CVViewController {
-    private func setupConstraints() {
         
+        let skill = skillModels[indexPath.item]
+        let maxWidth = view.bounds.width - 32
+        
+        cell.configure(skill: skill, isEdit: false, maxWidth: maxWidth)
+        
+        return cell
     }
+    
+    
 }
-

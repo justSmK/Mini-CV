@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias MyCollectionViewDelegates = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
+
 final class CVView: UIView {
 
     private let scrollView: UIScrollView = {
@@ -25,6 +27,8 @@ final class CVView: UIView {
     }()
     
     private let topViewContainer = TopViewContainer()
+    
+    private let skillsCollectionView = SkillsCollectionView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,8 +41,10 @@ final class CVView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureData(profile: Profile) {
+    func configureData(profile: Profile, delegate: UICollectionViewDelegateFlowLayout, dataSource: UICollectionViewDataSource) {
         topViewContainer.configureData(profile: profile)
+        skillsCollectionView.delegate = delegate
+        skillsCollectionView.dataSource = dataSource
     }
 }
 
@@ -48,7 +54,10 @@ private extension CVView {
             scrollView
         )
         scrollView.addSubview(scrollContainerView)
-        scrollContainerView.addSubview(topViewContainer)
+        scrollContainerView.addSubviews(
+            topViewContainer,
+            skillsCollectionView
+        )
     }
     
     func setupConstraints() {
@@ -71,6 +80,16 @@ private extension CVView {
             topViewContainer.topAnchor.constraint(equalTo: scrollContainerView.topAnchor),
             topViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
             topViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            skillsCollectionView.topAnchor.constraint(equalTo: topViewContainer.bottomAnchor, constant: 20),
+            skillsCollectionView.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: AppConstantsConstraints.collectionViewHorizontal
+            ),
+            skillsCollectionView.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -AppConstantsConstraints.collectionViewHorizontal
+            ),
         ])
     }
 }

@@ -27,21 +27,42 @@ final class StorageServiceTest: XCTestCase {
     }
     
     func testSetObject() {
+        let expectation = XCTestExpectation(description: "Waiting for async call")
+        
         let setData = mockData
-        storageManager.set(setData, forKey: .skills, completion: {})
+        storageManager.set(setData, forKey: .skills) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5.0)
+        
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         XCTAssertEqual(getData, setData)
     }
     
     func testGetObject() {
-        storageManager.set(mockData, forKey: .skills, completion: {})
+        let expectation = XCTestExpectation(description: "Waiting for async call")
+        
+        storageManager.set(mockData, forKey: .skills) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5.0)
+        
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         XCTAssertNotNil(getData)
         XCTAssertEqual(getData, mockData)
     }
 
     func testRemoveObject() throws {
-        storageManager.set(mockData, forKey: .skills, completion: {})
+        let expectation = XCTestExpectation(description: "Waiting for async call")
+        
+        storageManager.set(mockData, forKey: .skills) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5.0)
+        
         let getData: MockStructDataArray = storageManager.codableData(forKey: .skills)
         storageManager.remove(forKey: .skills)
         let nilData: MockStructDataArray = storageManager.codableData(forKey: .skills)

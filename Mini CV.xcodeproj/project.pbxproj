@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB0CB89E2A924E7D00474D0A /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */; };
 		BB0CB8A02A92535D00474D0A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CB89F2A92535D00474D0A /* Profile.swift */; };
+		BB2B42E02A94CBB100653170 /* AppConstantsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2B42DF2A94CBB100653170 /* AppConstantsConstraints.swift */; };
 		BB614DE32A9394DD00B33DA5 /* SkillsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */; };
 		BB614DE62A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		BB614DE92A93A64700B33DA5 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE82A93A64700B33DA5 /* ToastView.swift */; };
@@ -21,7 +22,7 @@
 		BB7C47B02A9115CD009386C3 /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47AF2A9115CD009386C3 /* AppIcons.swift */; };
 		BB7C47B22A911672009386C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7C47B12A911672009386C3 /* Colors.xcassets */; };
 		BB7C47B42A9116C8009386C3 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B32A9116C8009386C3 /* AppColors.swift */; };
-		BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B52A911881009386C3 /* ConstantsSizes.swift */; };
+		BB7C47B62A911881009386C3 /* AppConstantsSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B52A911881009386C3 /* AppConstantsSizes.swift */; };
 		BB7C47B82A911A12009386C3 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47B72A911A12009386C3 /* AppImages.swift */; };
 		BB7C47BF2A911C42009386C3 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47BE2A911C42009386C3 /* AppFonts.swift */; };
 		BB7C47C22A9121DE009386C3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47C12A9121DE009386C3 /* UIView+Extensions.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		BB0CB89D2A924E7D00474D0A /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
 		BB0CB89F2A92535D00474D0A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BB2B42DF2A94CBB100653170 /* AppConstantsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstantsConstraints.swift; sourceTree = "<group>"; };
 		BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionView.swift; sourceTree = "<group>"; };
 		BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BB614DE82A93A64700B33DA5 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		BB7C47AF2A9115CD009386C3 /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
 		BB7C47B12A911672009386C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BB7C47B32A9116C8009386C3 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		BB7C47B52A911881009386C3 /* ConstantsSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSizes.swift; sourceTree = "<group>"; };
+		BB7C47B52A911881009386C3 /* AppConstantsSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstantsSizes.swift; sourceTree = "<group>"; };
 		BB7C47B72A911A12009386C3 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		BB7C47BE2A911C42009386C3 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		BB7C47C12A9121DE009386C3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -233,7 +235,8 @@
 		BB7C47BC2A911C0C009386C3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				BB7C47B52A911881009386C3 /* ConstantsSizes.swift */,
+				BB7C47B52A911881009386C3 /* AppConstantsSizes.swift */,
+				BB2B42DF2A94CBB100653170 /* AppConstantsConstraints.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -482,7 +485,7 @@
 				BB0CB89E2A924E7D00474D0A /* LocalizationKeys.swift in Sources */,
 				BB0CB8A02A92535D00474D0A /* Profile.swift in Sources */,
 				BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */,
-				BB7C47B62A911881009386C3 /* ConstantsSizes.swift in Sources */,
+				BB7C47B62A911881009386C3 /* AppConstantsSizes.swift in Sources */,
 				BB7C47AB2A91128C009386C3 /* TopViewContainer.swift in Sources */,
 				BB8CD7852A8FDB0B00676A11 /* CVViewController.swift in Sources */,
 				BB614DE62A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
@@ -500,6 +503,7 @@
 				BB614DE92A93A64700B33DA5 /* ToastView.swift in Sources */,
 				BB7C47BF2A911C42009386C3 /* AppFonts.swift in Sources */,
 				BBBAB2E92A8FF7EA0077ECAF /* SkillsService.swift in Sources */,
+				BB2B42E02A94CBB100653170 /* AppConstantsConstraints.swift in Sources */,
 				BBBAB2EC2A8FFB9A0077ECAF /* MockData.swift in Sources */,
 				BB614DE32A9394DD00B33DA5 /* SkillsCollectionView.swift in Sources */,
 				BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */,

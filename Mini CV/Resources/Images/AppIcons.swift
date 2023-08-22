@@ -8,6 +8,8 @@
 import UIKit.UIImage
 
 enum AppIcons {
-    static let location = UIImage(named: "locationIcon")
+    static let location = UIImage(named: "LocationIcon")
+    static let pencil = UIImage(named: "PencilIcon")
+    static let checkmark = UIImage(named: "CheckmarkIcon")
 }
 

@@ -14,7 +14,7 @@ final class TopViewContainer: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = ConstantsSizes.avatarImage.width / 2
+        imageView.layer.cornerRadius = AppConstantsSizes.avatarImage.width / 2
         return imageView
     }()
     
@@ -63,13 +63,14 @@ final class TopViewContainer: UIView {
     }
     
     func configureData(profile: Profile) {
-        avatarImageView.image = UIImage(named: profile.imageName)
-        fullNameLabel.text = profile.fullName
-        descriptionLabel.text = profile.description
-        
         guard let locationIconImage else { return }
         let attachment = NSTextAttachment(image: locationIconImage)
         locationLabel.attributedText = setupAttributedString(label: locationLabel, attachment: attachment)
+        
+        
+        avatarImageView.image = UIImage(named: profile.imageName)
+        fullNameLabel.text = profile.fullName
+        descriptionLabel.text = profile.description
     }
 }
 
@@ -93,8 +94,8 @@ private extension TopViewContainer {
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
             avatarImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            avatarImageView.heightAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.height),
-            avatarImageView.widthAnchor.constraint(equalToConstant: ConstantsSizes.avatarImage.width),
+            avatarImageView.heightAnchor.constraint(equalToConstant: AppConstantsSizes.avatarImage.height),
+            avatarImageView.widthAnchor.constraint(equalToConstant: AppConstantsSizes.avatarImage.width),
             
             fullNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
             fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 113),

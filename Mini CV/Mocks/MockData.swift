@@ -22,12 +22,14 @@ struct MockData {
         .init(name: "MVP"),
         .init(name: "MVVM"),
         .init(name: "URLSession"),
-        .init(name: "GCD and Operation")
+        .init(name: "GCD and Operation"),
+        
+        .init(name: "TestTestTestTestTestTestTestTestTestTestTestTestTestTest")
     ]
     
     let viewControllerTitle: String = "Profile"
     
-    let profileImageName: String = "profileImage"
+    let profileImageName: String = "ProfileImage"
     
     let fullName: String = "Semko Sergei Sergeevich"
     

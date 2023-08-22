@@ -8,6 +8,17 @@
 import UIKit
 
 final class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
+    
+    override init() {
+        super.init()
+        self.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        self.minimumInteritemSpacing = AppConstantsSizes.CollectionView.spaceBetweenSkills
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)
         
