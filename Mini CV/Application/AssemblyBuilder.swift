@@ -30,7 +30,7 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
             fullName: LocalizationKeys.fullName,
             description: LocalizationKeys.descriptionText,
             location: LocalizationKeys.locationText,
-            about: LocalizationKeys.descriptionText
+            about: LocalizationKeys.aboutDescriptionText
         )
         
         let viewController = CVViewController(skillsService: skillService, profile: profile)
