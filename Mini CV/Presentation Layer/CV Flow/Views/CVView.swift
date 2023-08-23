@@ -72,8 +72,8 @@ private extension CVView {
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: self.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             scrollContainerView.topAnchor.constraint(equalTo: scrollContentLayoutGuide.topAnchor),
@@ -84,22 +84,28 @@ private extension CVView {
             scrollContainerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             topViewContainer.topAnchor.constraint(equalTo: scrollContainerView.topAnchor),
-            topViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-            topViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            topViewContainer.leadingAnchor.constraint(equalTo: scrollContainerView.leadingAnchor),
+            topViewContainer.trailingAnchor.constraint(equalTo: scrollContainerView.trailingAnchor),
             
             middleViewContainer.topAnchor.constraint(equalTo: topViewContainer.bottomAnchor, constant: 20),
             middleViewContainer.leadingAnchor.constraint(
-                equalTo: leadingAnchor,
+                equalTo: scrollContainerView.leadingAnchor,
                 constant: AppConstantsConstraints.viewHorizontal
             ),
             middleViewContainer.trailingAnchor.constraint(
-                equalTo: trailingAnchor,
+                equalTo: scrollContainerView.trailingAnchor,
                 constant: -AppConstantsConstraints.viewHorizontal
             ),
             
             bottomViewContainer.topAnchor.constraint(equalTo: middleViewContainer.bottomAnchor, constant: 24),
-            bottomViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: AppConstantsConstraints.viewHorizontal),
-            bottomViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -AppConstantsConstraints.horizontalSkill),
+            bottomViewContainer.leadingAnchor.constraint(
+                equalTo: scrollContainerView.leadingAnchor,
+                constant: AppConstantsConstraints.viewHorizontal
+            ),
+            bottomViewContainer.trailingAnchor.constraint(
+                equalTo: scrollContainerView.trailingAnchor,
+                constant: -AppConstantsConstraints.horizontalSkill
+            ),
             bottomViewContainer.bottomAnchor.constraint(equalTo: scrollContainerView.bottomAnchor, constant: -10)
         ])
     }
