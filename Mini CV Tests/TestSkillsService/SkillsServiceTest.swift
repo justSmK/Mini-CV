@@ -24,6 +24,31 @@ final class SkillsServiceTest: XCTestCase {
         skillsService = nil
     }
     
+    func testSkillServiceMemoryLeakTeardown() {
+        let storageManagereTest = StubStorageManager()
+        let skills = MockData.shared.defaultsSkills
+        let skillServiceTest = SkillsService(storageManager: storageManagereTest, skills: skills)
+        
+        let _ = skillServiceTest.fetchSkills()
+        
+        addTeardownBlock { [weak storageManagereTest, weak skillServiceTest] in
+            XCTAssertNil(storageManagereTest, "potential memory leak on \(String(describing: storageManagereTest))")
+            XCTAssertNil(skillServiceTest, "potential memory leak on \(String(describing: skillServiceTest))")
+        }
+    }
+    
+    func testSkillServiceMemoryLeak() {
+        let storageManager = StubStorageManager()
+        let skills = MockData.shared.defaultsSkills
+        let skillService = SkillsService(storageManager: storageManager, skills: skills)
+        
+        let _ = skillService.fetchSkills()
+        skillService.saveSkills(defaultSkills)
+        let _ = skillService.fetchSkills()
+        
+        trackForMemoryLeak(instance: skillService)
+    }
+    
     func testFetchDefaultSkills() {
         let skills = skillsService.fetchSkills()
         XCTAssertEqual(skills, defaultSkills)

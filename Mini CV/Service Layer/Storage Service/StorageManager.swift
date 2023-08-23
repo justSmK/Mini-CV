@@ -8,6 +8,7 @@
 import Foundation.NSUserDefaults
 
 final class StorageManager {
+    
     enum Keys: String {
         case skills
     }

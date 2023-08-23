@@ -13,6 +13,7 @@
 		BB614DE32A9394DD00B33DA5 /* SkillsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */; };
 		BB614DE62A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		BB614DE92A93A64700B33DA5 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB614DE82A93A64700B33DA5 /* ToastView.swift */; };
+		BB66B5ED2A95F7FA009E86DE /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66B5EC2A95F7FA009E86DE /* XCTestCase+Extension.swift */; };
 		BB7C479D2A90D673009386C3 /* CVViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */; };
 		BB7C479F2A90D697009386C3 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */; };
 		BB7C47A12A90D6A5009386C3 /* AddSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */; };
@@ -62,6 +63,7 @@
 		BB614DE22A9394DD00B33DA5 /* SkillsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionView.swift; sourceTree = "<group>"; };
 		BB614DE52A93955700B33DA5 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BB614DE82A93A64700B33DA5 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		BB66B5EC2A95F7FA009E86DE /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		BB7C479C2A90D673009386C3 /* CVViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewProtocol.swift; sourceTree = "<group>"; };
 		BB7C479E2A90D697009386C3 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB7C47A02A90D6A5009386C3 /* AddSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				BBBAB30E2A9011620077ECAF /* Mini CV.xctestplan */,
+				BB66B5EC2A95F7FA009E86DE /* XCTestCase+Extension.swift */,
 				BBBAB3012A9002BE0077ECAF /* TestStorageService */,
 				BBBAB2FC2A9000A60077ECAF /* TestSkillsService */,
 			);
@@ -514,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB66B5ED2A95F7FA009E86DE /* XCTestCase+Extension.swift in Sources */,
 				BBBAB30D2A9010000077ECAF /* SkillTest+Extenstion.swift in Sources */,
 				BBBAB3072A90039F0077ECAF /* MockStruct.swift in Sources */,
 				BBBAB3052A9002E40077ECAF /* StorageServiceTest.swift in Sources */,
