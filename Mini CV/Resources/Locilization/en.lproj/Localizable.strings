@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Mini CV
+
+  Created by Sergei Semko on 8/23/23.
+  
+*/
+
+"profile" = "Profile";
+"my_skills" = "My skills";
+"about_me" = "About";
+
+"full_name" = "Semko Sergei Sergeevich";
+"description" = "Senior iOS developer, experience 15 years";
+"location" = "Rostov-on-Don";
+"about_description" = "Experienced software engineer skilled in developing scalable and maintainable systems";
+
+"alert_title" = "Adding a Skill";
+"alert_message" = "Enter the name of the skill you own";
+"alert_text_field_placeholder" = "Enter a name";
+"alert_cancel_action" = "Cancel";
+"alert_add_action" = "Add";

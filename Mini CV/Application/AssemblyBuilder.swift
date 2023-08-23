@@ -24,17 +24,17 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
         
         let profile = Profile(
             imageName: mockData.profileImageName,
-            fullName: mockData.fullName,
-            description: mockData.description,
-            location: mockData.location,
-            about: mockData.aboutMeDescription
+            fullName: LocalizationKeys.fullName,
+            description: LocalizationKeys.descriptionText,
+            location: LocalizationKeys.locationText,
+            about: LocalizationKeys.descriptionText
         )
         
         let viewController = CVViewController(skillsService: skillService, profile: profile)
         
         
         let navigationController = UINavigationController(rootViewController: viewController)
-        setupNavigationController(navigationController: navigationController, title: mockData.viewControllerTitle)
+        setupNavigationController(navigationController: navigationController, title: LocalizationKeys.cvVCTitle)
         return navigationController
     }
     

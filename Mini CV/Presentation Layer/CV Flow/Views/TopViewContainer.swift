@@ -63,14 +63,13 @@ final class TopViewContainer: UIView {
     }
     
     func configureData(profile: Profile) {
-        guard let locationIconImage else { return }
-        let attachment = NSTextAttachment(image: locationIconImage)
-        locationLabel.attributedText = setupAttributedString(label: locationLabel, attachment: attachment)
-        
-        
         avatarImageView.image = UIImage(named: profile.imageName)
         fullNameLabel.text = profile.fullName
         descriptionLabel.text = profile.description
+        
+        guard let locationIconImage else { return }
+        let attachment = NSTextAttachment(image: locationIconImage)
+        locationLabel.attributedText = setupAttributedString(originString: profile.location, label: locationLabel, attachment: attachment)
     }
 }
 
@@ -115,7 +114,7 @@ private extension TopViewContainer {
 }
 
 private extension TopViewContainer {
-    func setupAttributedString(label: UILabel, attachment: NSTextAttachment) -> NSMutableAttributedString {
+    func setupAttributedString(originString: String, label: UILabel, attachment: NSTextAttachment) -> NSMutableAttributedString {
         let mid = label.font.capHeight - (attachment.image?.size.height ?? 0) / 2.5
         
         guard let image = attachment.image else { return  NSMutableAttributedString() }
@@ -124,7 +123,7 @@ private extension TopViewContainer {
         
         let attributedString = NSAttributedString(attachment: attachment)
         
-        let mutableAttributedString = NSMutableAttributedString(string: MockData.shared.location)
+        let mutableAttributedString = NSMutableAttributedString(string: originString)
         mutableAttributedString.insert(attributedString, at: 0)
         
         return mutableAttributedString

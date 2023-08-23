@@ -15,9 +15,7 @@ final class BottomViewContainer: UIView {
         label.textColor = AppColors.label
         label.textAlignment = .left
         label.font = AppFonts.about
-        
-        label.text = MockData.shared.aboutMe
-        
+        label.text = LocalizationKeys.aboutMe
         return label
     }()
     

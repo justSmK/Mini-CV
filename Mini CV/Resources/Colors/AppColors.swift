@@ -11,4 +11,5 @@ enum AppColors {
     static let gray = UIColor(named: "Gray")
     static let background = UIColor(named: "Background")
     static let label = UIColor(named: "Label")
+    static let tint = UIColor(named: "Tint")
 }
