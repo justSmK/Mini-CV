@@ -8,6 +8,8 @@
 import UIKit
 
 final class CVView: UIView {
+    
+    // MARK: - Private Properties
 
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -28,6 +30,8 @@ final class CVView: UIView {
     private let middleViewContainer = MiddleViewContainer()
     
     private let bottomViewContainer = BottomViewContainer()
+    
+    // MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,12 +43,16 @@ final class CVView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal Methods
+    
     func configureData(profile: Profile, collectionViewDataSource: UICollectionViewDataSource, buttonDelegate: CVViewControllerDelegate) {
         topViewContainer.configureData(profile: profile)
         middleViewContainer.configureData(dataSource: collectionViewDataSource, buttonDelegate: buttonDelegate)
         bottomViewContainer.configure(description: profile.about)
     }
 }
+
+// MARK: - Setup Layout, Constraints
 
 private extension CVView {
     func setupLayout() {
@@ -82,20 +90,22 @@ private extension CVView {
             middleViewContainer.topAnchor.constraint(equalTo: topViewContainer.bottomAnchor, constant: 20),
             middleViewContainer.leadingAnchor.constraint(
                 equalTo: leadingAnchor,
-                constant: AppConstantsConstraints.collectionViewHorizontal
+                constant: AppConstantsConstraints.viewHorizontal
             ),
             middleViewContainer.trailingAnchor.constraint(
                 equalTo: trailingAnchor,
-                constant: -AppConstantsConstraints.collectionViewHorizontal
+                constant: -AppConstantsConstraints.viewHorizontal
             ),
             
             bottomViewContainer.topAnchor.constraint(equalTo: middleViewContainer.bottomAnchor, constant: 24),
-            bottomViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: AppConstantsConstraints.collectionViewHorizontal),
+            bottomViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: AppConstantsConstraints.viewHorizontal),
             bottomViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -AppConstantsConstraints.horizontalSkill),
             bottomViewContainer.bottomAnchor.constraint(equalTo: scrollContainerView.bottomAnchor, constant: -10)
         ])
     }
 }
+
+// MARK: - CollectionCVViewProtocol
 
 extension CVView: CollectionCVViewProtocol {
     

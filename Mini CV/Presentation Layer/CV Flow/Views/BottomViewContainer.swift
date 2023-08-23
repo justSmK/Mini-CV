@@ -9,6 +9,8 @@ import UIKit
 
 final class BottomViewContainer: UIView {
     
+    // MARK: - Private Properties
+    
     private let aboutLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,6 +31,8 @@ final class BottomViewContainer: UIView {
         return label
     }()
     
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -39,10 +43,14 @@ final class BottomViewContainer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal Methods
+    
     func configure(description: String) {
         descriptionLabel.text = description
     }
 }
+
+// MARK: - Setup Layout, Constraints
 
 private extension BottomViewContainer {
     func setupLayout() {
@@ -54,8 +62,6 @@ private extension BottomViewContainer {
             descriptionLabel
         )
     }
-    
-    // MARK: - Setup Constraints
     
     func setupConstraints() {
         NSLayoutConstraint.activate([

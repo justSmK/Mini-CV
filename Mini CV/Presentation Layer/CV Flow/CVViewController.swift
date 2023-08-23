@@ -9,6 +9,8 @@ import UIKit
 
 class CVViewController: UIViewController {
     
+    // MARK: - Private Properties
+    
     private let skillsService: SkillsServiceProtocol
     
     private let profile: Profile
@@ -19,6 +21,8 @@ class CVViewController: UIViewController {
     
     private var isEditMode: Bool = false
     
+    // MARK: - Initializers
+    
     init(skillsService: SkillsServiceProtocol, profile: Profile) {
         self.skillsService = skillsService
         self.profile = profile
@@ -28,6 +32,8 @@ class CVViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -41,9 +47,7 @@ class CVViewController: UIViewController {
         cvView.configureData(profile: self.profile, collectionViewDataSource: self, buttonDelegate: self)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+    // MARK: - Private Methods
     
     private func loadData() {
         skillModels = skillsService.fetchSkills()
@@ -60,7 +64,7 @@ class CVViewController: UIViewController {
         cvView.reloadData()
         skillsService.saveSkills(skillModels) { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.showToastMessage()
+            strongSelf.showToastMessage(message: LocalizationKeys.dataDeleted)
         }
     }
     
@@ -71,12 +75,12 @@ class CVViewController: UIViewController {
         cvView.reloadData()
         skillsService.saveSkills(skillModels) { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.showToastMessage()
+            strongSelf.showToastMessage(message: LocalizationKeys.dataSaved)
         }
     }
     
-    private func showToastMessage() {
-        let toast = ToastView(message: "Данные сохранены")
+    private func showToastMessage(message: String) {
+        let toast = ToastView(message: message)
         toast.showToast(on: view)
     }
 }
@@ -125,8 +129,7 @@ private extension CVViewController {
         ) as? SkillCollectionViewCell else { return UICollectionViewCell() }
         
         let skill = skillModels[indexPath.item]
-        #warning("Check constant")
-        let width = view.frame.width - 40
+        let width = view.frame.width - AppConstantsConstraints.horizontalSkill * 2
         
         cell.configure(skill: skill, isEdit: isEditMode, maxWidth: width) { [weak self] in
             guard let strongSelf = self else { return }

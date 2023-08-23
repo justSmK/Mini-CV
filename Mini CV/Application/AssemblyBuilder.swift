@@ -8,6 +8,9 @@
 import UIKit
 
 protocol AssemblyBuilderProtocol {
+    
+    /// Creates and configures a CVViewController.
+    /// - Returns: A configured UIViewController instance, wrapped inside a UINavigationController.
     func createCVViewController() -> UIViewController
 }
 
@@ -38,9 +41,12 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
         return navigationController
     }
     
+    
+    /// Private method to set up a navigation controller with a specific title.
+    /// - Parameters:
+    ///   - navigationController: The navigation controller to set up.
+    ///   - title: The title to assign to the first view controller within the navigation controller.
     private func setupNavigationController(navigationController: UINavigationController, title: String) {
-//        navigationController.hidesBarsOnSwipe = true
-//        navigationController.navigationBar.backgroundColor = UIColor(named: AppColors.gray)
         navigationController.viewControllers.first?.title = title
     }
 }

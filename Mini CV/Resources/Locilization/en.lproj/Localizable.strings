@@ -11,7 +11,7 @@
 "about_me" = "About";
 
 "full_name" = "Semko Sergei Sergeevich";
-"description" = "Senior iOS developer, experience 15 years";
+"description" = "Middle-iOS developer, experience 15 years";
 "location" = "Rostov-on-Don";
 "about_description" = "Experienced software engineer skilled in developing scalable and maintainable systems";
 
@@ -20,3 +20,6 @@
 "alert_text_field_placeholder" = "Enter a name";
 "alert_cancel_action" = "Cancel";
 "alert_add_action" = "Add";
+
+"data_saved" = "Data saved";
+"data_deleted" = "Data deleted";

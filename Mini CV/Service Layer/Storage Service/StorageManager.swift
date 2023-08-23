@@ -7,8 +7,11 @@
 
 import Foundation.NSUserDefaults
 
+
+/// A class for managing data storage using `UserDefaults'.
 final class StorageManager {
     
+    /// Enumeration for managing keys used in the repository.
     enum Keys: String {
         case skills
     }

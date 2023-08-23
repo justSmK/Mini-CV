@@ -22,7 +22,9 @@ final class AlertManager {
         actions.forEach { action in
             alertController.addAction(UIAlertAction(title: action.title, style: action.style, handler: { _ in
                 let string = alertController.textFields?.first?.text ?? ""
-                action.handler?(string)
+                if !string.isEmpty {
+                    action.handler?(string)
+                }
             }))
         }
         

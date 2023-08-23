@@ -9,6 +9,8 @@ import UIKit
 
 final class TopViewContainer: UIView {
     
+    // MARK: - Private Properties
+    
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +44,6 @@ final class TopViewContainer: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 1
-//        label.adjustsFontSizeToFitWidth = true
         label.font = AppFonts.location
         return label
     }()
@@ -62,6 +63,8 @@ final class TopViewContainer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal Methods
+    
     func configureData(profile: Profile) {
         avatarImageView.image = UIImage(named: profile.imageName)
         fullNameLabel.text = profile.fullName
@@ -73,6 +76,7 @@ final class TopViewContainer: UIView {
     }
 }
 
+// MARK: - Setup Layout, Constraints
 
 private extension TopViewContainer {
     func setupLayout() {
@@ -87,8 +91,6 @@ private extension TopViewContainer {
         )
     }
     
-    // MARK: - Setup Constraints
-    
     func setupConstraints() {
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
@@ -97,12 +99,24 @@ private extension TopViewContainer {
             avatarImageView.widthAnchor.constraint(equalToConstant: AppConstantsSizes.avatarImage.width),
             
             fullNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
-            fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 113),
-            fullNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -113),
+            fullNameLabel.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: AppConstantsConstraints.topInfoNameHorizontal
+            ),
+            fullNameLabel.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -AppConstantsConstraints.topInfoNameHorizontal
+            ),
             
             descriptionLabel.topAnchor.constraint(equalTo: fullNameLabel.bottomAnchor, constant: 4),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 51),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -51),
+            descriptionLabel.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: AppConstantsConstraints.topInfoNameHorizontal
+            ),
+            descriptionLabel.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -AppConstantsConstraints.topInfoNameHorizontal
+            ),
             
             locationLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
 //            locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -112,6 +126,8 @@ private extension TopViewContainer {
         ])
     }
 }
+
+// MARK: - Setup Attributed String
 
 private extension TopViewContainer {
     func setupAttributedString(originString: String, label: UILabel, attachment: NSTextAttachment) -> NSMutableAttributedString {

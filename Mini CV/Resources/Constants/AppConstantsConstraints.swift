@@ -11,5 +11,7 @@ enum AppConstantsConstraints {
     static let horizontalSkill: CGFloat = 24
     static let verticalSkill: CGFloat = 12
     
-    static let collectionViewHorizontal: CGFloat = 16
+    static let viewHorizontal: CGFloat = 16
+    
+    static let topInfoNameHorizontal: CGFloat = 51
 }

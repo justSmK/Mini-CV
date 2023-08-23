@@ -11,6 +11,8 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: AddSkillCollectionViewCell.self)
     
+    // MARK: - Private Properties
+    
     private var addSkillAction: (() -> Void)?
     
     private lazy var addSkillButton: UIButton = {
@@ -22,6 +24,8 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
         return button
     }()
     
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupContentView()
@@ -31,6 +35,8 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Private Methods
 
     private func setupContentView() {
         contentView.backgroundColor = AppColors.gray
@@ -44,10 +50,14 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
         addSkillAction?()
     }
     
+    // MARK: - Internal Methods
+    
     func configure(addAction: @escaping (() -> Void)) {
         addSkillAction = addAction
     }
 }
+
+// MARK: - Setup Constraints
 
 private extension AddSkillCollectionViewCell {
     func setupConstraints() {

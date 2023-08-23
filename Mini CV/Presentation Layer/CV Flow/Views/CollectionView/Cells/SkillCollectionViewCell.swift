@@ -10,10 +10,10 @@ import UIKit
 final class SkillCollectionViewCell: UICollectionViewCell {
 
     static let identifier = String(describing: SkillCollectionViewCell.self)
-    
-    private var removeSkillAction: (() -> Void)?
 
     // MARK: - Private Properties
+    
+    private var removeSkillAction: (() -> Void)?
 
     private let skillLabel: UILabel = {
         let label = UILabel()
@@ -36,6 +36,8 @@ final class SkillCollectionViewCell: UICollectionViewCell {
     private var skillLabelTrailingConstraint: NSLayoutConstraint?
     private var skillLabelToCloseButtonTrailingConstraint: NSLayoutConstraint?
     private var contentViewWidthConstraint: NSLayoutConstraint?
+    
+    // MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,6 +48,8 @@ final class SkillCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Private Methods
 
     private func setupContentView() {
         contentView.backgroundColor = AppColors.gray
@@ -85,6 +89,8 @@ final class SkillCollectionViewCell: UICollectionViewCell {
         removeSkillAction = removeAction
     }
 }
+
+// MARK: - Setup Constraints
 
 private extension SkillCollectionViewCell {
     func setupConstraints() {

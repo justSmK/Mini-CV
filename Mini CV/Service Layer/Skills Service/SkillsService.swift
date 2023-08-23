@@ -5,11 +5,17 @@
 //  Created by Sergei Semko on 8/18/23.
 //
 
+/// A service class to manage skills.
 final class SkillsService {
     
     private let storageManager: StorageManagerProtocol
     private let defaultsSkills: [Skill]
     
+    
+    /// Initializes a new instance of the skills service.
+    /// - Parameters:
+    ///   - storageManager: A storage manager conforming to `StorageManagerProtocol`.
+    ///   - skills: The default skills to return if no skills are found in storage.
     init(storageManager: StorageManagerProtocol, skills: [Skill]) {
         self.storageManager = storageManager
         self.defaultsSkills = skills

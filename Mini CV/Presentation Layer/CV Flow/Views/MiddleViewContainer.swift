@@ -9,6 +9,8 @@ import UIKit
 
 final class MiddleViewContainer: UIView {
     
+    // MARK: - Private Properties
+    
     private weak var buttonDelegate: CVViewControllerDelegate?
     
     private let mySkillsLabel: UILabel = {
@@ -31,6 +33,7 @@ final class MiddleViewContainer: UIView {
     
     private let skillsCollectionView = SkillsCollectionView()
     
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,16 +45,22 @@ final class MiddleViewContainer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private Methods
+    
     @objc
     private func editButtonTapped(_ sender: UIButton) {
         buttonDelegate?.editDidTap()
     }
+    
+    // MARK: - Internal Methods
     
     func configureData(dataSource: UICollectionViewDataSource, buttonDelegate: CVViewControllerDelegate) {
         skillsCollectionView.dataSource = dataSource
         self.buttonDelegate = buttonDelegate
     }
 }
+
+// MARK: - Setup Layout, Constraints
 
 private extension MiddleViewContainer {
     func setupLayout() {
@@ -75,8 +84,6 @@ private extension MiddleViewContainer {
             
             editButton.trailingAnchor.constraint(equalTo: trailingAnchor),
             editButton.topAnchor.constraint(equalTo: topAnchor),
-//            editButton.heightAnchor.constraint(equalToConstant: AppConstantsSizes.pencilIcon.height),
-//            editButton.widthAnchor.constraint(equalToConstant: AppConstantsSizes.pencilIcon.width),
             
             skillsCollectionView.topAnchor.constraint(equalTo: mySkillsLabel.bottomAnchor, constant: 20),
             skillsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -85,6 +92,8 @@ private extension MiddleViewContainer {
         ])
     }
 }
+
+// MARK: - CollectionCVViewProtocol
 
 extension MiddleViewContainer: CollectionCVViewProtocol {
     func reloadData() {

@@ -23,8 +23,6 @@ struct MockData {
         .init(name: "MVVM"),
         .init(name: "URLSession"),
         .init(name: "GCD and Operation"),
-        
-        .init(name: "TestTestTestTestTestTestTestTestTestTestTestTestTestTest")
     ]
     
     let profileImageName: String = "ProfileImage"

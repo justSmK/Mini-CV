@@ -35,8 +35,8 @@ final class ToastView: UIView {
     
     private func setupView(message: String) {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor.black.withAlphaComponent(0.7)
-        layer.cornerRadius = 15
+        backgroundColor = UIColor.label.withAlphaComponent(0.7)
+        layer.cornerRadius = 12
         clipsToBounds = true
         
         addSubviews(label)
@@ -61,16 +61,16 @@ final class ToastView: UIView {
     
     // MARK: - Internal Methods
 
-    func showToast(on view: UIView, showDuration: TimeInterval = 1.0,
-                   hideDuration: TimeInterval = 1.0,
-                   displayTime: TimeInterval = 2.0
+    func showToast(on view: UIView, showDuration: TimeInterval = 0.5,
+                   hideDuration: TimeInterval = 0.5,
+                   displayTime: TimeInterval = 1.0
     ) {
         self.alpha = 0.0
         view.addSubview(self)
         
         NSLayoutConstraint.activate([
+            self.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             self.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            self.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
         
         UIView.animate(withDuration: showDuration) {

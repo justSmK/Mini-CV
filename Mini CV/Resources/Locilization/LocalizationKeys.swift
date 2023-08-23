@@ -13,6 +13,8 @@ enum LocalizationKeys {
     private static let _cvViewControllerTitle: String = "profile"
     private static let _mySkillsLabel: String = "my_skills"
     private static let _aboutMeLabel: String = "about_me"
+    private static let _dataSaved: String = "data_saved"
+    private static let _dataDeleted: String = "data_deleted"
 }
 
 
@@ -64,6 +66,14 @@ extension LocalizationKeys {
     
     static var aboutDescriptionText: String {
         return Self._aboutDescriptionText.localized
+    }
+    
+    static var dataSaved: String {
+        return Self._dataSaved.localized
+    }
+    
+    static var dataDeleted: String {
+        return Self._dataDeleted.localized
     }
 }
 
