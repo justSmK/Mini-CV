@@ -1,7 +1,7 @@
 # Mini-CV
 Surf test assignment 
 
-[Terms of reference (ru)](Brief.md)
+[Terms of reference (ru)](BRIEF.md)
 
 The app includes a mini resume function, the "My skills" block is editable, the rest is hard-coded. The screen can be scrolled. Developed on UIKit with no third party libraries, only native tools.
 
