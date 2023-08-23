@@ -10,6 +10,8 @@ import UIKit
 final class SkillCollectionViewCell: UICollectionViewCell {
 
     static let identifier = String(describing: SkillCollectionViewCell.self)
+    
+    private var removeSkillAction: (() -> Void)?
 
     // MARK: - Private Properties
 
@@ -21,10 +23,11 @@ final class SkillCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    private let closeButton: UIButton = {
+    private lazy var removeSkillButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(AppSystemImages.xmark, for: .normal)
+        button.addTarget(self, action: #selector(removeButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -47,32 +50,38 @@ final class SkillCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 12
 
         contentView.addSubview(skillLabel)
-        contentView.addSubview(closeButton)
+        contentView.addSubview(removeSkillButton)
+    }
+    
+    @objc
+    private func removeButtonTapped(_ sender: UIButton) {
+        removeSkillAction?()
     }
 
     // MARK: - Internal Methods
 
-    func configure(skill: Skill, isEdit: Bool, maxWidth: CGFloat) {
+    func configure(skill: Skill, isEdit: Bool, maxWidth: CGFloat, removeAction: @escaping (() -> Void)) {
         contentView.layoutIfNeeded()
 
-        closeButton.isHidden = true
+        removeSkillButton.isHidden = true
 
         skillLabel.text = skill.name
         skillLabel.invalidateIntrinsicContentSize()
 
-        closeButton.isHidden = !isEdit
+        removeSkillButton.isHidden = !isEdit
 
-//        if isEdit {
-//            skillLabelTrailingConstraint?.priority = .defaultLow
-//            skillLabelToCloseButtonTrailingConstraint?.priority = .defaultHigh
-//        } else {
-//            skillLabelToCloseButtonTrailingConstraint?.priority = .defaultLow
-//            skillLabelTrailingConstraint?.priority = .defaultHigh
-//        }
+        if isEdit {
+            skillLabelTrailingConstraint?.priority = .defaultLow
+            skillLabelToCloseButtonTrailingConstraint?.priority = .defaultHigh
+        } else {
+            skillLabelToCloseButtonTrailingConstraint?.priority = .defaultLow
+            skillLabelTrailingConstraint?.priority = .defaultHigh
+        }
 
         contentViewWidthConstraint?.constant = maxWidth
+        
+        removeSkillAction = removeAction
     }
-
 }
 
 private extension SkillCollectionViewCell {
@@ -89,7 +98,7 @@ private extension SkillCollectionViewCell {
                 constant: -24
             )
         skillLabelTrailingConstraint?.isActive = true
-//        skillLabelTrailingConstraint?.priority = .defaultHigh
+        skillLabelTrailingConstraint?.priority = .defaultHigh
 
         NSLayoutConstraint.activate([
             skillLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
@@ -102,17 +111,17 @@ private extension SkillCollectionViewCell {
         skillLabelToCloseButtonTrailingConstraint = skillLabel
             .trailingAnchor
             .constraint(
-                equalTo: closeButton.leadingAnchor,
+                equalTo: removeSkillButton.leadingAnchor,
                 constant: -10
             )
-//        skillLabelToCloseButtonTrailingConstraint?.isActive = false
-//        skillLabelToCloseButtonTrailingConstraint?.priority = .defaultLow
+        skillLabelToCloseButtonTrailingConstraint?.isActive = true
+        skillLabelToCloseButtonTrailingConstraint?.priority = .defaultLow
 
         NSLayoutConstraint.activate([
-            closeButton.widthAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.width),
-            closeButton.heightAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.height),
-            closeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            closeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
+            removeSkillButton.widthAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.width),
+            removeSkillButton.heightAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.height),
+            removeSkillButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
+            removeSkillButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
 
         ])
     }

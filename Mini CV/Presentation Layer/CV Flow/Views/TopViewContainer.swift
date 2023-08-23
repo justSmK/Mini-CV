@@ -78,7 +78,7 @@ final class TopViewContainer: UIView {
 private extension TopViewContainer {
     func setupLayout() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .systemGray6
+        backgroundColor = AppColors.gray
         
         addSubviews(
             avatarImageView,

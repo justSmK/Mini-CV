@@ -27,7 +27,7 @@ struct AssemblyBuilder: AssemblyBuilderProtocol {
             fullName: mockData.fullName,
             description: mockData.description,
             location: mockData.location,
-            about: mockData.aboutMe
+            about: mockData.aboutMeDescription
         )
         
         let viewController = CVViewController(skillsService: skillService, profile: profile)

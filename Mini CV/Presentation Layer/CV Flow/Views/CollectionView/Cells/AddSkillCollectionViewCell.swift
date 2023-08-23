@@ -11,11 +11,14 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: AddSkillCollectionViewCell.self)
     
-    private let addSkillButton: UIButton = {
+    private var addSkillAction: (() -> Void)?
+    
+    private lazy var addSkillButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(AppSystemImages.plus, for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(addSkillButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -36,6 +39,14 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(addSkillButton)
     }
     
+    @objc
+    private func addSkillButtonTapped(_ sender: UIButton) {
+        addSkillAction?()
+    }
+    
+    func configure(addAction: @escaping (() -> Void)) {
+        addSkillAction = addAction
+    }
 }
 
 private extension AddSkillCollectionViewCell {

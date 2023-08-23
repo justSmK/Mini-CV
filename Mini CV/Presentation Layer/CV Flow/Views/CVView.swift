@@ -7,8 +7,6 @@
 
 import UIKit
 
-typealias MyCollectionViewDelegates = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
-
 final class CVView: UIView {
 
     private let scrollView: UIScrollView = {
@@ -22,17 +20,17 @@ final class CVView: UIView {
     private let scrollContainerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
         return view
     }()
     
     private let topViewContainer = TopViewContainer()
     
-    private let skillsCollectionView = SkillsCollectionView()
+    private let middleViewContainer = MiddleViewContainer()
+    
+    private let bottomViewContainer = BottomViewContainer()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupLayout()
         setupConstraints()
     }
@@ -41,10 +39,10 @@ final class CVView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureData(profile: Profile, delegate: UICollectionViewDelegateFlowLayout, dataSource: UICollectionViewDataSource) {
+    func configureData(profile: Profile, collectionViewDataSource: UICollectionViewDataSource, buttonDelegate: CVViewControllerDelegate) {
         topViewContainer.configureData(profile: profile)
-        skillsCollectionView.delegate = delegate
-        skillsCollectionView.dataSource = dataSource
+        middleViewContainer.configureData(dataSource: collectionViewDataSource, buttonDelegate: buttonDelegate)
+        bottomViewContainer.configure(description: profile.about)
     }
 }
 
@@ -56,7 +54,8 @@ private extension CVView {
         scrollView.addSubview(scrollContainerView)
         scrollContainerView.addSubviews(
             topViewContainer,
-            skillsCollectionView
+            middleViewContainer,
+            bottomViewContainer
         )
     }
     
@@ -74,22 +73,45 @@ private extension CVView {
             scrollContainerView.trailingAnchor.constraint(equalTo: scrollContentLayoutGuide.trailingAnchor),
             scrollContainerView.bottomAnchor.constraint(equalTo: scrollContentLayoutGuide.bottomAnchor),
             
-            scrollContainerView.heightAnchor.constraint(equalToConstant: 1000),
             scrollContainerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             topViewContainer.topAnchor.constraint(equalTo: scrollContainerView.topAnchor),
             topViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
             topViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            skillsCollectionView.topAnchor.constraint(equalTo: topViewContainer.bottomAnchor, constant: 20),
-            skillsCollectionView.leadingAnchor.constraint(
+            middleViewContainer.topAnchor.constraint(equalTo: topViewContainer.bottomAnchor, constant: 20),
+            middleViewContainer.leadingAnchor.constraint(
                 equalTo: leadingAnchor,
                 constant: AppConstantsConstraints.collectionViewHorizontal
             ),
-            skillsCollectionView.trailingAnchor.constraint(
+            middleViewContainer.trailingAnchor.constraint(
                 equalTo: trailingAnchor,
                 constant: -AppConstantsConstraints.collectionViewHorizontal
             ),
+            
+            bottomViewContainer.topAnchor.constraint(equalTo: middleViewContainer.bottomAnchor, constant: 24),
+            bottomViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: AppConstantsConstraints.collectionViewHorizontal),
+            bottomViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -AppConstantsConstraints.horizontalSkill),
+            bottomViewContainer.bottomAnchor.constraint(equalTo: scrollContainerView.bottomAnchor, constant: -10)
         ])
+    }
+}
+
+extension CVView: CollectionCVViewProtocol {
+    
+    func reloadData() {
+        middleViewContainer.reloadData()
+    }
+    
+    func buttonChange(image: UIImage?) {
+        middleViewContainer.buttonChange(image: image)
+    }
+    
+    func deleteItemsInCollectionView(indexPath: IndexPath) {
+        middleViewContainer.deleteItemsInCollectionView(indexPath: indexPath)
+    }
+    
+    var collectionForCell: UICollectionView {
+        middleViewContainer.collectionForCell
     }
 }
