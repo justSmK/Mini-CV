@@ -17,7 +17,7 @@ final class AddSkillCollectionViewCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(AppSystemImages.plus, for: .normal)
-        button.tintColor = .black
+        button.tintColor = AppColors.tint
         button.addTarget(self, action: #selector(addSkillButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -67,7 +67,7 @@ private extension AddSkillCollectionViewCell {
             addSkillButton.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
                 constant: -AppConstantsConstraints.horizontalSkill
-            )
+            ),
         ])
     }
 }

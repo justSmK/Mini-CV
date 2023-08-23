@@ -5,7 +5,7 @@
 //  Created by Sergei Semko on 8/19/23.
 //
 
-import UIKit
+import UIKit.UIView
 
 extension UIView {
     func addSubviews(_ views: UIView...) {

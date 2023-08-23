@@ -16,9 +16,7 @@ final class MiddleViewContainer: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = AppFonts.skills
         label.textColor = AppColors.label
-        
-        label.text = MockData.shared.mySkills
-        
+        label.text = LocalizationKeys.mySkills
         return label
     }()
     
@@ -27,6 +25,7 @@ final class MiddleViewContainer: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(AppIcons.pencil, for: .normal)
         button.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)
+        button.tintColor = AppColors.tint
         return button
     }()
     
@@ -45,12 +44,10 @@ final class MiddleViewContainer: UIView {
     
     @objc
     private func editButtonTapped(_ sender: UIButton) {
-        print("editButtonTapped")
         buttonDelegate?.editDidTap()
     }
     
     func configureData(dataSource: UICollectionViewDataSource, buttonDelegate: CVViewControllerDelegate) {
-//        skillsCollectionView.delegate = collectionViewDelegate
         skillsCollectionView.dataSource = dataSource
         self.buttonDelegate = buttonDelegate
     }

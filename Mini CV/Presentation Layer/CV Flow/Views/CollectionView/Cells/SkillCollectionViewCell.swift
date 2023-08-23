@@ -20,6 +20,7 @@ final class SkillCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = AppColors.label
         label.font = AppFonts.skill
+        label.tintColor = AppColors.tint
         return label
     }()
 
@@ -27,6 +28,7 @@ final class SkillCollectionViewCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(AppSystemImages.xmark, for: .normal)
+        button.tintColor = AppColors.tint
         button.addTarget(self, action: #selector(removeButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -120,9 +122,9 @@ private extension SkillCollectionViewCell {
         NSLayoutConstraint.activate([
             removeSkillButton.widthAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.width),
             removeSkillButton.heightAnchor.constraint(equalToConstant: AppConstantsSizes.locationIcon.height),
-            removeSkillButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
+//            removeSkillButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
+            removeSkillButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             removeSkillButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-
         ])
     }
 }
