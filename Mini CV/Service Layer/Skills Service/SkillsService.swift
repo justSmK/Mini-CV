@@ -5,8 +5,6 @@
 //  Created by Sergei Semko on 8/18/23.
 //
 
-import Foundation
-
 final class SkillsService {
     
     private let storageManager: StorageManagerProtocol
@@ -26,7 +24,7 @@ extension SkillsService: SkillsServiceProtocol {
         return skills.isEmpty ? defaultsSkills : skills
     }
     
-    func saveSkills(_ skills: [Skill]) {
-        storageManager.set(skills, forKey: .skills)
+    func saveSkills(_ skills: [Skill], completion: @escaping () -> Void = {}) {
+        storageManager.set(skills, forKey: .skills, completion: completion)
     }
 }
